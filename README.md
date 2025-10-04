@@ -1,73 +1,102 @@
-# React + TypeScript + Vite
+# Tafseer Circle
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Tafseer Circle is a community project for sharing Quranic tafsir (exegesis), translations, notes, and recorded sessions through a simple web app.
+## Vision
 
-Currently, two official plugins are available:
+We want to build a community-driven site where members can:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Share community information (about the group, organisers, schedules).
+- Upload and browse resources organized by surah/ruku/ayah.
+- Provide multiple tafaseer and translations per ayah or ruku.
+- Watch embedded lecture videos (YouTube) and access recorded sessions.
+- Contribute notes, comment, and collaboratively build a searchable library.
 
-## React Compiler
+## Tech stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Frontend: React + TypeScript + Vite
+- Backend / Auth / Storage: Firebase (Auth, Firestore, Storage) — planned for quick integration
 
-## Expanding the ESLint configuration
+The frontend is intentionally minimal to make it easy to extend and connect to Firebase services later.
+# Tafseer Circle
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Tafseer Circle is a student-led Qur'an study circle based at Lahore Garrison University. We are not an official university organization — this is a student initiative run with sincerity and reflection.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## About the circle
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+This circle meets regularly to study the Qur'an together. Our activities include:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Reading translations and explanations
+- Open discussions and sharing reflections
+
+Purpose: to connect with the Qur'an, learn together, and grow as brothers in deen.
+
+This repository contains the code for the website we want to build to support the circle: sharing resources, posting lecture recordings, and coordinating members.
+
+## Vision
+
+We want to build a community-driven site where members can:
+
+- Share community information (about the group, organisers, schedules)
+- Upload and browse resources organized by surah/ruku/ayah
+- Provide multiple tafaseer and translations per ayah or ruku
+- Watch embedded lecture videos (YouTube) and access recorded sessions
+- Contribute notes, comment, and collaboratively build a searchable library
+
+## Tech stack
+
+- Frontend: React + TypeScript + Vite
+- Backend / Auth / Storage: Firebase (Auth, Firestore, Storage) — planned for quick integration
+
+The frontend is intentionally minimal to make it easy to extend and connect to Firebase services later.
+
+## Current status
+
+- Scaffolded with Vite, React, and TypeScript
+- Initial UI and project structure in place
+- Project maintained by a small team of student contributors
+
+## Planned features
+
+1. Community pages (About, Contact, Schedules)
+2. Resource library
+   - Organize by surah / ruku / ayah
+   - Multiple tafaseer, translations, and member uploads (PDFs, text, links)
+3. Video lectures (embedded YouTube, playlist support)
+4. User accounts and simple moderation
+   - Firebase Authentication (Google sign-in as a starting point)
+5. Search and filtering (surah, ayah, tafsir, contributor)
+
+## Getting started (local)
+
+1. Install dependencies
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Start the dev server
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+3. Firebase setup (optional, for backend features)
+
+- Create a Firebase project and enable Auth / Firestore / Storage as needed.
+- Add your Firebase config to environment variables or a `.env` file. Consider adding a `.env.example` with the required keys.
+
+## Contributing
+
+- Pick a small feature or bug and open a branch for it.
+- Keep PRs focused and add a brief description and testing notes.
+- Documentation and UI improvements are welcome.
+
+If you're joining the team, add your name to `CONTRIBUTING.md` (when available) or open an issue to introduce yourself.
+
+## License & Contact
+
+This repository does not include a license file yet — add one if you plan to open-source the code. For questions or to join the project, open an issue or contact the maintainers.
+
+---
+
+This README will be expanded with architecture diagrams, data models (Firestore collections), and a contributor guide as the project grows.
