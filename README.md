@@ -1,24 +1,5 @@
 # Tafseer Circle
 
-Tafseer Circle is a community project for sharing Quranic tafsir (exegesis), translations, notes, and recorded sessions through a simple web app.
-## Vision
-
-We want to build a community-driven site where members can:
-
-- Share community information (about the group, organisers, schedules).
-- Upload and browse resources organized by surah/ruku/ayah.
-- Provide multiple tafaseer and translations per ayah or ruku.
-- Watch embedded lecture videos (YouTube) and access recorded sessions.
-- Contribute notes, comment, and collaboratively build a searchable library.
-
-## Tech stack
-
-- Frontend: React + TypeScript + Vite
-- Backend / Auth / Storage: Firebase (Auth, Firestore, Storage) — planned for quick integration
-
-The frontend is intentionally minimal to make it easy to extend and connect to Firebase services later.
-# Tafseer Circle
-
 Tafseer Circle is a student-led Qur'an study circle based at Lahore Garrison University. We are not an official university organization — this is a student initiative run with sincerity and reflection.
 
 ## About the circle
