@@ -1,1 +1,35 @@
+
+/* Tailwind v4 single import */
 @import "tailwindcss";
+
+/* Base site styles using explicit colors (keeps tooling happier) */
+html, body, #root {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	background-color: #FFF8E1; /* cream */
+	color: #5A4A2A; /* taupe (text) */
+	font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Brand utility classes using Tailwind tokens (also usable in plain CSS) */
+.brand-bg { background-color: #2fbd54; color: #ffffff; }
+.brand-accent { color: #e6a80f; }
+.brand-btn { background-color: #e6a80f; color: #154826; font-weight: 600; padding: 0.5rem 1rem; border-radius: 0.375rem; display:inline-flex; align-items: center; gap: 0.375rem }
+.brand-outline { border: 2px solid #2fbd54; color: #1f6d33; padding: 0.25rem 0.75rem; border-radius: 0.375rem; display:inline-flex; align-items: center; gap: 0.375rem }
+
+/* Navigation variants */
+.brand-nav-gold { background-color: #e6a80f; color: #3f2b02; }
+.brand-nav-brown { background-color: #5A4A2A; color: #FFF8E1; }
+
+/* Example hero section helper */
+.hero {
+	padding: 2rem;
+	text-align: center;
+	background-image: linear-gradient(90deg, rgba(47,189,84,0.08), rgba(230,168,15,0.04));
+}
+
+/* Accessibility helper */
+.sr-only { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
