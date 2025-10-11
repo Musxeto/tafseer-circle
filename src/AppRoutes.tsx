@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Join from "./pages/Join";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Sessions from "./pages/Sessions";
+import Resourses from "./pages/Resources";
 import NotFoundPage from "./pages/NotFoundPage";
 
 const AppRoutes: React.FC = () => {
@@ -11,8 +13,8 @@ const AppRoutes: React.FC = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/sessions"></Route>
-        <Route path="/resources"></Route>
+        <Route path="/sessions" element={<Sessions />}></Route>
+        <Route path="/resources" element={<Resourses />}></Route>
         <Route path="/join" element={<Join />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
