@@ -31,3 +31,37 @@
   width: auto;
   filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.12));
 }
+
+/* for styling of navlinks */
+.navbar {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem 2rem;
+}
+
+/* d for desktop */
+.nav-link-d {
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 4px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Create underline effect */
+.nav-link-d::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1.5px;
+  background-color: #3f2b02; /* underline color */
+  transition: width 0.3s ease;
+}
+
+/* On hover or when active */
+.nav-link-d:hover::after,
+.nav-link-d.active-d::after {
+  width: 100%;
+}

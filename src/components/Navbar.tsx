@@ -31,7 +31,7 @@ export const Navbar = () => {
 
   return (
     <nav
-      className={`site-header brand-nav-gold w-full px-4 md:px-8 flex items-center justify-between h-[--navbar-height] shadow-sm shadow-neutral-300 bg-white z-50 ${isMenuOpen ? "max-md: fixed" : ""}`}
+      className={`navbar site-header brand-nav-gold w-full px-4 md:px-8 flex items-center justify-between h-[--navbar-height] shadow-sm shadow-neutral-300 bg-white z-50 ${isMenuOpen ? "max-md: fixed" : ""}`}
     >
       {/* Logo Section */}
       <div className="logo flex items-center gap-2">
@@ -68,7 +68,7 @@ export const Navbar = () => {
             <NavLink
               to={link.path}
               className={({ isActive }) =>
-                `${isActive ? "font-semibold" : ""} hover:text-[#5a4a2A]`
+                `${isActive ? "nav-link-d active-d" : "nav-link-d"} hover:text-[#5a4a2A]`
               }
               onClick={closeMenuOnMobile}
             >
