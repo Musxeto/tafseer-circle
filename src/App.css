@@ -1,18 +1,33 @@
 .site-header {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  margin: 0 auto;
 }
 
 .logo {
-	display:flex;
-	gap:0.75rem;
-	align-items:center;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
 }
 
-.logo img { height:32px; width:auto }
+.logo img {
+  height: 32px;
+  width: auto;
+}
 
-.hero-title { font-size: clamp(1.25rem, 2.5vw, 2rem); font-weight:700 }
-.nav-title { font-size: 1.125rem; font-weight: 700; line-height: 1.2; }
-.hero-logo { height: 80px; width: auto; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.12)); }
+.hero-title {
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+  font-weight: 700;
+}
+.nav-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.hero-logo {
+  height: 80px;
+  width: auto;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.12));
+}
