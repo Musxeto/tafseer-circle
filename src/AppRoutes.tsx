@@ -6,16 +6,18 @@ import About from "./pages/About";
 import NotFoundPage from "./pages/NotFoundPage";
 
 const AppRoutes: React.FC = () => {
-    return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/join" element={<Join />} />
-                <Route path="*" element={<NotFoundPage />} />
-            </Routes>
-        </Router>
-    );
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/join" element={<Join />} />
+
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </Router>
+  );
 };
 
 export default AppRoutes;
+
